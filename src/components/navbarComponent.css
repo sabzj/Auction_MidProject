@@ -1,0 +1,53 @@
+.navbar-container {
+  background-color: #ff3d00;
+  padding: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item a:hover {
+  color: #212121;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.custom-dropdown-item {
+  padding: 10px 20px; /* Add padding to each dropdown item */
+  color: #333 !important; /* Set the text color */
+  text-decoration: none; /* Remove underlines from links */
+  display: block; /* Make the items a block element */
+}
+.custom-dropdown-item:hover {
+  background-color: #ff3d00; /* Change background color on hover */
+}
+.custom-dropdown-item.active {
+  background-color: #1b1a18; /* Set background color for the active item */
+  font-weight: bold; /* Make the active item bold */
+}
+
+/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+<NavDropdown.Item href="#action/3.2">
+  Another action
+</NavDropdown.Item>
+<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+<NavDropdown.Divider />
+<NavDropdown.Item href="#action/3.4">
+  Separated link
+</NavDropdown.Item>
+</NavDropdown> */
