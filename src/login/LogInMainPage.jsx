@@ -93,7 +93,7 @@
 
 // new blue card code//
 import React, { useState } from "react";
-import "./LoginMainPage.css";
+import "./LogInMainPage.css";
 import useAxios from "../Hooks/useAxios";
 import { useNavigate } from "react-router-dom";
 
