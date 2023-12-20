@@ -1,8 +1,12 @@
 import React from "react";
-import AuctionsCardsOnMain from "./AuctionsOnMainPage";
+import ALLAuctionsInPageTwo from "./AllAuctions";
+// import AuctionsCardsOnMain from "../AuctionsOnFirstPage/AuctionsOnMainPage";
 
 function RightHandComponent() {
-  return <AuctionsCardsOnMain />;
+  return (
+    // <AuctionsCardsOnMain />
+    <ALLAuctionsInPageTwo />
+  );
 }
 
 export default RightHandComponent;

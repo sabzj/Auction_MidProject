@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Modal from "react-modal";
-import "SearchForAuctions.css";
+import "./SearchForAuction.css";
 
 const SearchForAuction = () => {
   const [searchCriteria, setSearchCriteria] = useState({

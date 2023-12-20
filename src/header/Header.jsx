@@ -1,89 +1,42 @@
 import React, { useState } from "react";
-import {
-  FaRegUserCircle,
-  FaSortDown,
-  FaBars,
-  FaRegLightbulb,
-} from "react-icons/fa";
+import Modal from "react-modal";
 import "./Header.css";
-import { useTheme } from "../../context/ThemeContext";
-import { Link } from "react-router-dom";
-import { useUser } from "../../context/UserContext";
+import NavbarComponent from "../components/NavbarComponent";
+import SearchForAuction from "../searchbar/SearchForAuction";
 
-export default function Header() {
-  const { theme, changeTheme } = useTheme();
-  const { user, getUser, logOutUser } = useUser();
-  const [clicked, setClicked] = useState(false);
-  const menuList = [
-    { name: "Homepage", path: "/" },
-    { name: "Add More", path: "/AddPark" },
-    { name: "About Us", path: "/AboutUs" },
-    { name: "Contact Us", path: "/ContactUs" },
-  ];
+const Header = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
-    <nav className="Header" id={theme ? "light-header" : "dark-header"}>
-      {/* menu list */}
-      <menu id="menu">
-        {menuList.map((item, index) => (
-          <Link key={index} className="menu-item" to={item.path}>
-            <ul>
-              <li>{item.name}</li>
-            </ul>
-          </Link>
-        ))}
-      </menu>
-      {/* setting side */}
-      <section name="setting" id="setting">
-        <div onClick={() => setClicked((prev) => !prev)}>
-          <FaBars />
+    <>
+      <Modal isOpen={isModalOpen} onRequestClose={closeModal}>
+        <p>
+          This is a new car in good condition that recently maintained
+          maintenance
+        </p>
+      </Modal>
+
+      <header className="main-header">
+        <div className="branding">
+          <h1>My Website</h1>
         </div>
-        <button id="mode" onClick={changeTheme}>
-          <FaRegLightbulb />
-        </button>
-      </section>
-      {/* login / logout container */}
-      {clicked && (
-        <div id="setting-container">
-          {console.log(user)}
-          {!user ? (
-            <div>
-              <button
-                onClick={() =>
-                  setTimeout(() => {
-                    setClicked(false);
-                  }, 500)
-                }
-              >
-                <Link to="/Login" className="link">
-                  Login
-                </Link>
-              </button>{" "}
-              <button
-                onClick={() =>
-                  setTimeout(() => {
-                    setClicked(false);
-                  }, 500)
-                }
-              >
-                <Link to="/Register" className="link">
-                  Register
-                </Link>
-              </button>
-            </div>
-          ) : (
-            <button
-              onClick={() =>
-                setTimeout(() => {
-                  setClicked(false);
-                  logOutUser();
-                }, 500)
-              }
-            >
-              Logout
-            </button>
-          )}
+        {/* <NavbarComponent /> */}
+        <div className="header-content">
+          <p>Welcome to our website!</p>
+          <div className="search-bar">{/* <SearchForAuction /> */}</div>
+          <button onClick={openModal}>View Page</button>
         </div>
-      )}
-    </nav>
+      </header>
+    </>
   );
-}
+};
+
+export default Header;

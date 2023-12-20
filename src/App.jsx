@@ -11,14 +11,37 @@ import Home from "./components/Home";
 import Agriculture from "./components/Agriculture";
 import AddAuctionForm from "./establishYourAuction/CreateAuction";
 
-import GroupRecommendAuctions from "./AllAuctions/MainPageRecomenAuctions";
+// import GroupRecommendAuctions from "./AllAuctions/MainPageRecomenAuctions";
 import LogInMainPage from "./login/LogInMainPage";
 import RegistrationForm from "./authentication/RegistrationForm";
+import Header from "./header/Header";
+import ViewPage from "./page2/ViewPage";
+import LiveCountdownCard from "./page2/LiveCountdownCard";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const App = ({ children }) => {
+  const [cardData, setCardData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://6582f1ce02f747c8367aaca4.mockapi.io/viewData"
+        );
+        setCardData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <BrowserRouter>
       <NavbarComponent />
+      <Header />
 
       {/* <GroupRecommendAuctions /> */}
 
@@ -33,6 +56,15 @@ const App = ({ children }) => {
         <Route path="/login" element={<LogInMainPage />} />
         <Route path="/register" element={<RegistrationForm />} />
         <Route path="/category/Agriculture" element={<Agriculture />} />
+        <Route path="/all-auctions" element={<LiveCountdownCard />} />
+        {/* <Route path="/" element={<LiveCardsContainer />} /> */}
+        <Route path="/view/:id" element={<ViewPage />} />
+        <Route path="/live-countdown" exact element={<LiveCountdownCard />}>
+          {/* <LiveCountdownCard />
+          {cardData.map((card) => (
+            <LiveCountdownCard key={card.id} {...card} />
+          ))} */}
+        </Route>
       </Routes>
       {children}
     </BrowserRouter>

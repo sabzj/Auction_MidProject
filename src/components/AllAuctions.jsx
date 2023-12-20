@@ -1,8 +1,16 @@
 import React from "react";
-import SecondPageContents from "../page2/SecondPageContents";
+import { Link } from "react-router-dom";
+import LiveCountdownCard from "../page2/LiveCountdownCard";
 
-function AllAuctions() {
-  return <SecondPageContents />;
+function ALLAuctionsInPageTwo() {
+  return (
+    <div>
+      <Link to="/all-auctions">
+        <button>All Auctions</button>
+      </Link>
+      <LiveCountdownCard />
+    </div>
+  );
 }
 
-export default AllAuctions;
+export default ALLAuctionsInPageTwo;

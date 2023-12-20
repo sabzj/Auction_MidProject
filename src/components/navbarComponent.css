@@ -1,6 +1,24 @@
 .navbar-container {
-  background-color: #ff3d00;
+  background-color: #14213d;
   padding: 10px;
+  /* position: fixed; */
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+.logInRegister {
+  display: flex;
+  gap: 10px;
+  color: #e5e5e5;
+}
+.dropdownFather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-list {
@@ -15,11 +33,11 @@
 
 .nav-item a {
   text-decoration: none;
-  color: white;
+  color: #e5e5e5;
 }
 
 .nav-item a:hover {
-  color: #212121;
+  color: #fca311;
 }
 
 .active {
@@ -28,12 +46,14 @@
 
 .custom-dropdown-item {
   padding: 10px 20px; /* Add padding to each dropdown item */
-  color: #333 !important; /* Set the text color */
+  color: #e5e5e5; /* Set the text color */
   text-decoration: none; /* Remove underlines from links */
-  display: block; /* Make the items a block element */
+  display: block;
+  cursor: pointer; /* Make the items a block element */
 }
 .custom-dropdown-item:hover {
-  background-color: #ff3d00; /* Change background color on hover */
+  background-color: #e5e5e5;
+  color: #14213d; /* Change background color on hover */
 }
 .custom-dropdown-item.active {
   background-color: #1b1a18; /* Set background color for the active item */

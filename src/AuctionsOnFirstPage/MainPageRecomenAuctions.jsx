@@ -43,11 +43,8 @@ function GroupRecommendAuctions() {
       <Card>
         <Card.Img variant="top" src={img1} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
+          <Card.Title>Current Bid</Card.Title>
+          <Card.Text>Sport and strong product for bidding</Card.Text>
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">Countdown: {formatTime(timer)}</small>
@@ -62,8 +59,8 @@ function GroupRecommendAuctions() {
       <Card>
         <Card.Img variant="top" src={img2} />
         <Card.Body>
-          <Card.Title>Elegant Car</Card.Title>
-          <Card.Text>Available for Bits </Card.Text>
+          <Card.Title>Current Bid</Card.Title>
+          <Card.Text>Elegant Car available for Bits </Card.Text>
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">Countdown: {formatTime(timer)}</small>
@@ -78,12 +75,8 @@ function GroupRecommendAuctions() {
       <Card>
         <Card.Img variant="top" src={img3} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </Card.Text>
+          <Card.Title>Current Bid</Card.Title>
+          <Card.Text>This is a top recommended bid for a good price</Card.Text>
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">Countdown: {formatTime(timer)}</small>
