@@ -43,8 +43,6 @@ const App = ({ children }) => {
       <NavbarComponent />
       <Header />
 
-      {/* <GroupRecommendAuctions /> */}
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -57,6 +55,10 @@ const App = ({ children }) => {
         <Route path="/register" element={<RegistrationForm />} />
         <Route path="/category/Agriculture" element={<Agriculture />} />
         <Route path="/all-auctions" element={<LiveCountdownCard />} />
+        {/* <Route
+          path="/recomended-auctions"
+          element={<GroupRecommendAuctions />}
+        /> */}
         {/* <Route path="/" element={<LiveCardsContainer />} /> */}
         <Route path="/view/:id" element={<ViewPage />} />
         <Route path="/live-countdown" exact element={<LiveCountdownCard />}>

@@ -205,37 +205,39 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      Username:{" "}
-      <input
-        type="text"
-        id="username"
-        value={formData.username}
-        onChange={handleChange}
-      />
-      Email:{" "}
-      <input
-        type="text"
-        id="email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      Password:{" "}
-      <input
-        type="text"
-        id="password"
-        value={formData.password}
-        onChange={handleChange}
-      />
-      Confirm Password:{" "}
-      <input
-        type="text"
-        id="confirmPassword"
-        value={formData.confirmPassword}
-        onChange={handleChange}
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="container">
+      <form onSubmit={handleFormSubmit}>
+        Username:{" "}
+        <input
+          type="text"
+          id="username"
+          value={formData.username}
+          onChange={handleChange}
+        />
+        Email:{" "}
+        <input
+          type="text"
+          id="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        Password:{" "}
+        <input
+          type="text"
+          id="password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+        Confirm Password:{" "}
+        <input
+          type="text"
+          id="confirmPassword"
+          value={formData.confirmPassword}
+          onChange={handleChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 };
 

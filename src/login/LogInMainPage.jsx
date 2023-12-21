@@ -127,6 +127,7 @@ function SignInForm({ email, password }) {
     setuserPassword(event.target.value);
   };
   console.log(userFound);
+
   return (
     <div className="Card">
       <div className="email">
